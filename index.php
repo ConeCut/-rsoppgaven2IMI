@@ -21,6 +21,7 @@ output_username();
 ?>
 </h2>
 <h2>(The Hall of Games is still a project under development)</h2>
+<button onclick='window.location.href = "login_system/PROPER_PHP_LogIN_SignUP_Form/login_signup_form.php"'>Log in to register scores!</button>
 <div class="mainContainer">
 <div class="gameContainer" id="game1" onclick="window.location.href='shooter_game/shooting_range.html'"></div>
 <div class="gameContainer" id="game2" onclick="window.location.href='falling_ball/falling_ball_game.php'"></div>

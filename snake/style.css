@@ -275,3 +275,16 @@ canvas{
         top: -200vh;
     }
 }
+
+button{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    width: 150px;
+    height: 75px;
+    border: 4px solid white;
+    border-radius: 5vh;
+    margin: auto;
+}
+

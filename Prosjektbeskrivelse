@@ -1,0 +1,35 @@
+Prosjektbeskrivelse: "The Hall Of Games"
+
+Uker (September 2023):
+
+	•	Laget prosjektbeskrivelse: Definerte omfanget av prosjektet, inkludert opprettelse av websiden "The Hall Of Games" med fem spill og tilknytning til "logindb"-databasen. Utarbeidet plan for implementering av et solid login-system i PHP.
+
+Uker (Oktober 2023):
+
+	•	Git Repository Opprettelse: Etablerte et Git-repository for prosjektet. Opprettet struktur for kildekode, dokumentasjon og ressurser.
+
+	•	CSS-styling: Startet arbeidet med CSS-styling for å definere utseendet på websiden. La grunnlaget for det visuelle designet og sørget for responsivitet på ulike enheter.
+
+Uker (November 2023):
+
+	•	Frontend Prototype: Utkastet en HTML-prototype for websiden med grunnleggende designelementer og navigasjon for hvert spill.
+
+	•	Login System Implementasjon: Startet implementering av PHP-basert login-system. Utformet grundige feilhåndteringsmekanismer for å sikre en robust og brukervennlig opplevelse.
+
+	•	JavaScript Interaktivitet: Begynte integrasjonen av JavaScript for å legge til interaktivitet i spillene. Utviklet funksjoner for å håndtere logikken bak snake, car racing, cookie clicker, falling ball game og shooting range.
+
+Uker (Desember 2023):
+
+	•	Databaseintegrasjon: Fullførte integrasjonen med "logindb"-databasen. Sørget for at spilldata, brukerinformasjon og poengsum ble lagret og hentet fra databasen.
+
+	•	Testing og Feilretting: Gjennomførte omfattende testing av alle spillfunksjoner, databasetilgang og sikkerhetsmekanismer. Løste eventuelle feil eller mangler identifisert under testingen.
+
+Websiden tilbyr engasjerende spill, et pålitelig login-system og en sømløs integrasjon med databasen. Git-repository gir en strukturert måte å administrere kildekode og dokumentasjon
+
+
+
+Ble løsningen/produktet det du tenkte ved start? - JA
+Hvorfor eventuelt endret du deg underveis? - ENDRET IKKE
+Hvilke utfordringer har du møtt underveis? - PHP SKILLS
+Har du lært noe i prosessen? - MYE PHP
+Hva vil du gjøre annerledes i neste runde? - ALT VAR PERFEKT.

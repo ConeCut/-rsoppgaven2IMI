@@ -1,0 +1,38 @@
+### Teknisk Dokumentasjon: "The Hall Of Games"
+
+#### Prosjektoversikt:
+"The Hall Of Games" er en nettbasert plattform som inneholder fem spill: snake, car racing, cookie clicker, falling ball game og shooting range. Dette dokumentet gir en detaljert oversikt over prosjektet og fungerer som en omfattende guide for utviklere, administratorer og sluttbrukere.
+
+#### Systemarkitektur:
+Websiden er bygget rundt en klient-servermodell. Klienten, som er nettleseren, kobler seg til serveren som håndterer brukerforespørsler, databasen "logindb," og spilllogikken.
+
+#### Git Repository Struktur:
+Prosjektet er organisert i et Git-repository med hovedmappen som inneholder kildekode, dokumentasjon og ressurser. Dette gir en systematisk tilnærming til versjonskontroll og samarbeid.
+
+#### Installasjonsprosedyrer:
+1. Klone Git-repositoryet.
+2. Installere nødvendige avhengigheter.
+3. Konfigurere "logindb"-databasen med gitt SQL-skript.
+#### Brukerveiledning:
+1. Opprett en brukerkonto og logg inn.
+2. Naviger gjennom websiden for å spille spillene.
+3. Se og oppdater din spillpoengsum i brukerprofilen.
+
+#### JavaScript Interaktivitet:
+JavaScript gir interaktivitet i hvert spill, styrer spilllogikken og håndterer brukerens input for en engasjerende spillopplevelse.
+
+#### PHP Login System:
+Implementert PHP-basert login-system med robuste sikkerhetsmekanismer og omfattende feilhåndtering for å sikre brukervennlighet og datasikkerhet.
+
+#### Databaseintegrasjon:
+- "logindb"-databasen kobler seg til websiden og lagrer brukerinformasjon, spilldata og poengsummer.
+- Strukturert med nødvendige tabeller for effektiv datahåndtering.
+
+#### CSS-styling:
+- CSS brukes til å designe websiden for et attraktivt utseende.
+- Ansvarsfullt design for optimal brukeropplevelse på ulike enheter.
+
+#### Testing og Feilretting:
+- Omfattende testing inkluderer enhetstesting, integrasjonstesting og akseptansetesting.
+- Feilrapporter og løsninger er dokumentert for identifiserte problemer.
+Denne tekniske dokumentasjonen gir en fullstendig forståelse av "The Hall Of Games" og fungerer som en nøkkelressurs for videre utvikling, administrasjon og bruk av plattformen.

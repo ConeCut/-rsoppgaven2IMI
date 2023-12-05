@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Racing</title>
+    <link href="../snake/style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="car_racing_game_body">
+
+<div id="score">Score: </div>
+
+<button id="start">Start</button>
+
+
+
+<div>
+<div id="enemycar1"><img id="car1" class="car_img" src="car_png_1.png" style="width: 444px; height: 800px" alt="car1"></div>
+<div id="enemycar2"><img id="car2" class="car_img" src="car_png_2.png" alt="car2"></div>
+<div id="enemycar3"><img id="car3" class="car_img" src="car_png_1.png" style="width: 444px; height: 800px" alt="car1"></div>
+<div id="enemycar4"><img id="car4" class="car_img" src="car_png_2.png" alt="car2"></div>
+</div>
+
+<div id="ourcar"><img src="car_png_3.png" id="ourcarimg" class="ourcar" alt="ourcar"></div>
+
+<div id="road"></div>
+
+</body>
+
+<script>
+
+    document.getElementById("start").addEventListener("click", function () {
+
+        document.getElementById("start").style.display = 'none'
+        document.getElementById("road").style.animation = 'roadanimation 20s linear infinite'
+
+        document.getElementById("car1").style.animation = 'ecar1 3s linear infinite'
+        document.getElementById("car2").style.animation = 'ecar2 5s linear infinite'
+        document.getElementById("car3").style.animation = 'ecar3 10s linear infinite'
+        document.getElementById("car4").style.animation = 'ecar4 7.5s linear infinite'
+
+
+
+
+        let t = 15
+        let l = 0
+
+        window.addEventListener("keydown", function (x) {
+
+            if (x.keyCode == 87) {
+                t = t - 3
+                // alert("w")
+
+            }
+            if (x.keyCode == 65) {
+                l = l - 1
+                // alert("w")
+            }
+            if (x.keyCode == 83) {
+                t = t + 3
+                // alert("w")
+            }
+            if (x.keyCode == 68) {
+                l = l + 1
+                // alert("w")
+            }
+            document.getElementById("ourcar").style.top = `${t}vh`
+            document.getElementById("ourcar").style.left = `${l}vw`
+        })
+
+        let n = 0
+        setInterval(() => {
+
+            document.getElementById("score").innerText = `Score : ${n}`
+            n = n + 1
+
+
+            let ecar1_left = Math.abs(document.getElementById("car1").getBoundingClientRect().left);
+            let ecar1_right = Math.abs(document.getElementById("car1").getBoundingClientRect().right);
+            let ecar1_top = Math.abs(document.getElementById("car1").getBoundingClientRect().top);
+            let ecar1_bottom = Math.abs(document.getElementById("car1").getBoundingClientRect().bottom);
+
+            let ecar2_left = Math.abs(document.getElementById("car2").getBoundingClientRect().left);
+            let ecar2_right = Math.abs(document.getElementById("car2").getBoundingClientRect().right);
+            let ecar2_top = Math.abs(document.getElementById("car2").getBoundingClientRect().top);
+            let ecar2_bottom = Math.abs(document.getElementById("car2").getBoundingClientRect().bottom);
+
+            let ecar3_left = Math.abs(document.getElementById("car3").getBoundingClientRect().left);
+            let ecar3_right = Math.abs(document.getElementById("car3").getBoundingClientRect().right);
+            let ecar3_top = Math.abs(document.getElementById("car3").getBoundingClientRect().top);
+            let ecar3_bottom = Math.abs(document.getElementById("car3").getBoundingClientRect().bottom);
+
+            let ecar4_left = Math.abs(document.getElementById("car4").getBoundingClientRect().left);
+            let ecar4_right = Math.abs(document.getElementById("car4").getBoundingClientRect().right);
+            let ecar4_top = Math.abs(document.getElementById("car4").getBoundingClientRect().top);
+            let ecar4_bottom = Math.abs(document.getElementById("car4").getBoundingClientRect().bottom);
+
+            let mycar_left = Math.abs(document.getElementById("ourcarimg").getBoundingClientRect().left);
+            let mycar_right = Math.abs(document.getElementById("ourcarimg").getBoundingClientRect().right);
+            let mycar_top = Math.abs(document.getElementById("ourcarimg").getBoundingClientRect().top);
+            let mycar_bottom = Math.abs(document.getElementById("ourcarimg").getBoundingClientRect().bottom);
+
+            let road_left = Math.abs(document.getElementById("road").getBoundingClientRect().left);
+            let road_right = Math.abs(document.getElementById("road").getBoundingClientRect().right);
+            if (mycar_left <= road_left){
+                alert('Game Over, you are out of bounds')
+                setTimeout(function(){
+                    window.location.reload();
+                }, 20);
+            }
+            if (mycar_right >= road_right){
+                alert('Game Over, you are out of bounds')
+                setTimeout(function(){
+                    window.location.reload();
+                }, 20);
+            }
+
+            if (((ecar1_left < mycar_left && mycar_left < ecar1_right) || (ecar1_left < mycar_right && mycar_right < ecar1_right)) && ((ecar1_top < mycar_top && mycar_top < ecar1_bottom) || (ecar1_top < mycar_bottom && mycar_bottom < ecar1_bottom))) {
+                alert(`GAME OVER!, you hit car 1`)
+                setTimeout(function(){
+                    window.location.reload();
+                }, 20);
+            }
+            if (((ecar2_left < mycar_left && mycar_left < ecar2_right) || (ecar2_left < mycar_right && mycar_right < ecar2_right)) && ((ecar2_top < mycar_top && mycar_top < ecar2_bottom) || (ecar2_top < mycar_bottom && mycar_bottom < ecar2_bottom))) {
+                alert(`GAME OVER!, you hit car 2`)
+                setTimeout(function(){
+                    window.location.reload();
+                }, 20);
+            }
+            if (((ecar3_left < mycar_left && mycar_left < ecar3_right) || (ecar3_left < mycar_right && mycar_right < ecar3_right)) && ((ecar3_top < mycar_top && mycar_top < ecar3_bottom) || (ecar3_top < mycar_bottom && mycar_bottom < ecar3_bottom))) {
+                    alert(`GAME OVER!, you hit car 3`)
+                setTimeout(function(){
+                    window.location.reload();
+                }, 20);
+            }
+            if (((ecar4_left < mycar_left && mycar_left < ecar4_right) || (ecar4_left < mycar_right && mycar_right < ecar4_right)) && ((ecar4_top < mycar_top && mycar_top < ecar4_bottom) || (ecar4_top < mycar_bottom && mycar_bottom < ecar4_bottom))) {
+                alert(`GAME OVER!, you hit car 4`)
+                setTimeout(function(){
+                    window.location.reload();
+                }, 20);
+            }
+        }, 100)
+    })
+</script>
+
+</html>

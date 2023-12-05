@@ -1,0 +1,90 @@
+Veiledning
+
+Her er en enkel veiledning for å opprette en database "logindb" med de angitte tabellene og legge til data i dem ved bruk av MariaDB:
+
+1. Åpne MariaDB gjennom CMD:
+
+bash
+
+cd C:/Program Files/MariaDB 11.1/bin
+
+mariadb.exe -u root -p
+
+2. Opprett databasen "logindb":
+
+sql
+
+CREATE DATABASE logindb;
+
+USE logindb;
+
+3. Opprett "users" tabellen:
+
+sql
+
+CREATE TABLE users (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    username VARCHAR(255),
+
+    pwd VARCHAR(255),
+
+    email VARCHAR(255),
+
+    registration_datetime DATETIME
+
+);
+
+4. Opprett "scores" tabellen med utenlandsk nøkkelreferanse til "users" tabellen:
+
+sql
+
+CREATE TABLE scores (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    user_id INT,
+
+    snake_score INT,
+
+    falling_ball_score INT,
+
+    car_racing_score INT,
+
+    shooter_score INT,
+
+    cookie_score INT,
+
+    FOREIGN KEY (user_id) REFERENCES users(id)
+
+);
+
+5. Legg inn data i "users" tabellen:
+
+sql
+
+INSERT INTO users (username, pwd, email, registration_datetime)
+
+VALUES ('brukernavn1', 'passord1', 'user1@example.com', datetime);
+
+INSERT INTO users (username, pwd, email, registration_datetime)
+
+VALUES ('brukernavn2', 'passord2', 'user2@example.com', datetime);
+
+6. Legg inn data i "scores" tabellen:
+
+sql
+
+INSERT INTO scores (user_id, snake_score, falling_ball_score, car_racing_score, shooter_score, cookie_score)
+
+VALUES (1, 100, 75, 90, 80, 95);
+
+INSERT INTO scores (user_id, snake_score, falling_ball_score, car_racing_score, shooter_score, cookie_score)
+
+VALUES (2, 120, 85, 88, 92, 97);
+
+
+Dette gir deg en grunnleggende struktur for databasen "logindb" med de to ønskede tabellene, og data er lagt inn for illustrasjon
+
+
